@@ -1,0 +1,94 @@
+/*@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '宋体', sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: url("../image/loginBackground.jpg");
+    /*background-color: #ffffff;*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.loginmain {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.loginmain .title {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px
+        /*transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+}
+
+.loginmain .inputform {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.loginmain .subtext{
+    width: 100%;
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.loginmain .loginbutton{ 
+    background-color: #e55800; 
+    border: none;
+    border-radius: 8px;
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    text-align: center; 
+    display: inline-block;
+    transition: background-color 0.3s;  
+    cursor: pointer;
+    width: 100%;
+}  
+.loginmain .loginbutton:hover{  
+    background-color: #b94700; 
+}
+
+.inputform form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.inputform form .field input {
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}

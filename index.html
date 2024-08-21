@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+
+<head>
+    <title>life of a newBiter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <audio id="loginbgm" src="./bgm/login_bgm.mp3" hidden="hidden"></audio>
+    <script src="./js/login.js" defer></script>
+</head>
+
+<body>
+    <div class="loginmain" id="loginpage" style="display: block;">
+        <div class="title">登录</div>
+        <div class="inputform">
+            <form>
+                <div class="field">
+                    <input type="text" placeholder="用户名" id="username" onfocus="bgmstart()" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="密码" id="password" required>
+                </div>
+            </form>
+        </div>
+        <div class="loginbutton" onclick="Login()">登录</div>
+        <div class="subtext">没有账号？<label style="border-bottom: 1px solid blue;cursor: pointer;color: blue;" onclick="toRegister()">注册</label></div>
+        
+    </div>
+
+    <div class="loginmain" id="registerpage" style="display: none;">
+        <div class="title">注册</div>
+        <div class="inputform">
+            <form>
+                <div class="field">
+                    <input type="text" placeholder="用户名" id="RegisterUsername" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="密码" id="RegisterPassword1" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="确认密码" id="RegisterPassword2" required>
+                </div>
+            </form>
+        </div>
+        <div class="loginbutton" onclick="Register()">注册</div>
+        <div class="subtext">已有账号？<label style="border-bottom: 1px solid blue;cursor: pointer;color: blue;" onclick="toLogin()">登录</label></div>
+        
+    </div>
+</body>
+</html>
