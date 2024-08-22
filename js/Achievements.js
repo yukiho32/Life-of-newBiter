@@ -7,3 +7,7 @@ function toggleDetails(item) {
         details.style.display = 'none';
     }
 }
+
+function toStartGame(){
+    location.href = "./startgame.html";
+}
