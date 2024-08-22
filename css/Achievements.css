@@ -1,0 +1,74 @@
+/*@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '楷体', sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: url("../image/loginBackground.jpg");
+    /*background-color: #ffffff;*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+/*以上一致*/
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    }
+   
+.achievement-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*成就框*/
+.achievement-item {
+    background-color: #cfcfcf;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s,transform 0.3s;
+}
+
+
+.achievement-item:hover {
+    background-color: #d2d2d2;
+    transform: scale(1.02);
+}
+
+.achievement-title {
+    font-size: 18px;
+    margin: 0;
+    transition: filter 0.3s;
+}
+        
+.achievement-details {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6f6f6f;
+}

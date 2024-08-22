@@ -28,7 +28,7 @@ function Login(){
                 document.getElementById('username').value = "";
                 document.getElementById('password').value = "";
                 localStorage.setItem("current-username", u);
-                //window.open('./game.html','_self');
+                window.open('./startgame.html','_self');
             } else {
                 alert("密码错误");
                 document.getElementById('password').value = "";
