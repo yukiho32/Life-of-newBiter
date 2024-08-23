@@ -33,7 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
     }
    
@@ -47,7 +47,7 @@ body {
     background-color: #cfcfcf;
     border: 1px solid #444444;
     border-radius: 5px;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 10px;
     cursor: pointer;
     position: relative;
@@ -57,7 +57,7 @@ body {
 
 .achievement-item:hover {
     background-color: #d2d2d2;
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .achievement-title {
@@ -65,10 +65,40 @@ body {
     margin: 0;
     transition: filter 0.3s;
 }
-        
+
 .achievement-details {
     display: none;
     margin-top: 10px;
     font-size: 14px;
     color: #6f6f6f;
 }
+
+.backbuttom {
+    font-size: 25px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-width 0.2s ease;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.backbuttom::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    /* 初始宽度为0 */
+    height: 2px;
+    /* 下划线的高度 */
+    background-color: #000;
+    /* 下划线的颜色 */
+    transition: width 0.3s ease;
+    /* 平滑过渡效果 */
+}
+
+.backbuttom:hover::after {
+    width: 100%;
+}
+    
