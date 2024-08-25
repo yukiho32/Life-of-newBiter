@@ -8,7 +8,8 @@ let finalScoreDisplay = document.getElementById('finalScore');
 let returnButton = document.getElementById('returnButton');
 let targetTimeout = null; 
 let moveAnimationFrame = null;
-let gameTimer = 30;
+//定时
+let gameTimer = 30;      
 let timerInterval = null; 
 
 //靶子设置
@@ -145,7 +146,7 @@ function startTimer() {
 function endGame() {
     gameArea.style.display = 'none'; 
     endScreen.style.display = 'flex'; 
-    finalScoreDisplay.innerText = `您的最终得分是: ${score}`; 
+    finalScoreDisplay.innerText = `您的最终得分是:${score}分`; 
 }
 
 function initializeGame() {
@@ -156,8 +157,9 @@ function initializeGame() {
 
 initializeGame();
 
+//返回地址
 returnButton.addEventListener('click', () => {
-    window.location.href = '#';
+    window.location.href = '#'; 
 });
 
 gameArea.addEventListener('mousemove', (e) => {
