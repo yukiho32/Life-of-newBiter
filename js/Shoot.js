@@ -30,6 +30,16 @@ function createTarget() {
     target.style.left = `${x}px`;
     target.style.top = `${y}px`;
 
+    // 每次生成新靶子时重置 opacity
+    target.style.opacity = '1';
+    target.style.transform = 'rotateX(0deg)';
+
+    // 移除 'clicked' 类，以便下一次点击能够正常触发动画
+    target.classList.remove('clicked');
+
+    // 隐藏靶子直到动画结束
+    target.style.display = 'block';
+
     if (targetTimeout) {
         clearTimeout(targetTimeout);
     }
@@ -40,6 +50,7 @@ function createTarget() {
 
     target.removeEventListener('click', handleTargetClick);
 
+     // 判断是否为静止靶子或移动靶子
     if (Math.random() > 0.5) {
         target.classList.add('moving');
         moveTarget();
@@ -87,6 +98,13 @@ function moveTarget() {
 }
 
 function handleTargetClick(e) {
+    target.classList.remove('clicked');
+
+    void target.offsetWidth;
+
+    target.classList.add('clicked');
+
+    // 计算点击位置与靶子中心的距离
     const rect = target.getBoundingClientRect();
     const clickX = e.clientX;
     const clickY = e.clientY;
@@ -96,14 +114,17 @@ function handleTargetClick(e) {
     const distanceY = clickY - targetCenterY;
     const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
+    // 判断点击区域并计算分数
     if (distance <= redRadius) {
-        score += 10; 
+        score += 10; // 点击红色区域
     } else if (distance <= targetSize / 2) {
-        score += 5;
+        score += 5; // 点击黄色区域
     }
 
     updateScore();
-    createTarget();
+
+    // 延迟创建新靶子以确保动画完整播放
+    setTimeout(createTarget, 300);
 }
 
 function updateScore() {
