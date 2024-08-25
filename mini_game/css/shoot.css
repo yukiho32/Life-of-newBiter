@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(../image/loginBackground.jpg);
+    background: url(../../image/loginBackground.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -75,16 +75,15 @@ body {
     position: fixed;
     overflow: hidden;
     place-items: center;
-    width: 100%;
-    max-width: 470px;
-    max-height: 300px;
+    width: 35%;
+    height: 30%;
 }
 
 #endMessage {
-    font-size: 30px;
+    font-size: 40px;
     border-bottom: 2px solid transparent;
     display: inline-block;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 30px;
     padding-left: 90px;
     padding-right: 90px;
