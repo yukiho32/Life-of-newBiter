@@ -13,6 +13,9 @@ var NONE        = 4,
 
 Pacman.FPS = 30;
 
+let gameArea = document.getElementById('pacman');
+let endScreen = document.getElementById('endScreen');
+
 Pacman.Ghost = function (game, map, colour) {
 
     var position  = null,
@@ -866,9 +869,9 @@ var PACMAN = (function () {
     }
 
         function endGame() {
-            setTimeout(() => {
-                window.location.href = "./"; // 替换为你指定的页面URL
-            }, 500); // 1秒后重定向
+            gameArea.style.display = 'none'; 
+            endScreen.style.display = 'flex'; 
+            finalScoreDisplay.innerText = `您的最终得分是:${theScore}分`; 
         }
 
     function setState(nState) { 
@@ -1040,8 +1043,10 @@ var PACMAN = (function () {
         
         var i, len, ghost,
             blockSize = wrapper.offsetWidth / 19,
-            canvas    = document.createElement("canvas");
+            canvas = document.createElement("canvas");
         
+        endScreen.style.display = 'none'; 
+
         canvas.setAttribute("width", (blockSize * 19) + "px");
         canvas.setAttribute("height", (blockSize * 22) + 30 + "px");
 
