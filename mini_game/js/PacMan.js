@@ -803,10 +803,10 @@ var PACMAN = (function () {
     
     function dialog(text) {
         ctx.fillStyle = "#FFFF00";
-        ctx.font      = "18px Calibri";
+        ctx.font      = "25px 黑体";
         var width = ctx.measureText(text).width,
             x     = ((map.width * map.blockSize) - width) / 2;        
-        ctx.fillText(text, x, (map.height * 10) + 8);
+        ctx.fillText(text, x, (map.height * 10) + 70);
     }
 
     function soundDisabled() {
@@ -857,10 +857,19 @@ var PACMAN = (function () {
     function loseLife() {        
         setState(WAITING);
         user.loseLife();
-        if (user.getLives() > 0) {
+        if(user.getLives() > 0) {
             startLevel();
         }
+        else {
+            endGame();
+        }
     }
+
+        function endGame() {
+            setTimeout(() => {
+                window.location.href = "./"; // 替换为你指定的页面URL
+            }, 500); // 1秒后重定向
+        }
 
     function setState(nState) { 
         state = nState;
