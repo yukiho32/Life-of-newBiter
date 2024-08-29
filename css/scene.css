@@ -1,3 +1,4 @@
+
 /*该css用于一般的游戏页面*/
 
 /*导入字体并设置默认格式*/
@@ -357,4 +358,3 @@ body{
     cursor: pointer;   
     overflow: hidden;  
     padding: 5px;
-}
