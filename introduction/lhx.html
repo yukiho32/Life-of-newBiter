@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>life of a newBiter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/AboutUs.css">
+    <script defer>
+        function toStartGame(){
+            location.href = "../startgame.html";
+        }
+        function tooto(ap){
+            location.href=ap;
+        }
+    </script>
+    <style>
+        .selfpage{
+            margin: 25px;
+            position: fixed;
+            overflow: auto;
+            height: 100vh;
+            left: 100px;
+            width: calc(100% - 100px);
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .selfpage .container{
+            background-color: rgb(50, 154, 210);
+            box-shadow: 2px 2px 5px;
+            border-radius: 15px;
+            display: flex;
+            width: 820px;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+        .selfpage .container .text{
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="list">
+            <div class="startbuttom" onclick="tooto('./lsl.html')" >李思蓝</div>
+            <div class="startbuttom" onclick="tooto('./dcz.html')" >杜春喆</div>
+            <div class="startbuttom" onclick="tooto('./zdn.html')" >周丁楠</div>
+            <div class="startbuttom" onclick="tooto('./lhx.html')" >刘浩翔</div>
+            <div class="startbuttom" onclick="tooto('./xxy.html')" >徐薰语</div>
+            <div class="startbuttom" onclick="tooto('./lbj.html')" >林柏健</div>
+            <div class="startbuttom" onclick="toStartGame()" >返回</div>
+        </div>
+    </div>
+    <div class="selfpage">
+        <div class="container">
+            <div class="text">
+                <p>我的名字是刘浩翔，年龄19岁。家在山西省运城市，单身。我在本次项目中负责部分程序编写，不吸烟，酒也是不胜一杯，晚上也是十二点前上床，保证7个小时的充足睡眠，睡前喝一杯牛奶，然后再睡觉，基本可以睡到天亮。</p>
+                <p>哈哈，玩梗到此结束。在本次大项目中，我主要负责mini-games程序的编写，有些效果实现起来还是比我想的要复杂一点，不过真正做出来后成就感还是很强的。</p>
+                <p>本人算是一个轻度（？）游戏迷，尤其喜欢act和arpg，魂游（魂小鬼太多啦，对魂游喜爱减一）、怪猎、鬼泣等游戏都比较喜欢。</p>
+            </div>
+            <img src="../image/IntroductionPeople/lhx.jpg" style="width: 300px;height: auto;">
+        </div>
+        
+    </div>
+</body>
+
+</html>

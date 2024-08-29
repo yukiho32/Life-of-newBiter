@@ -1,0 +1,40 @@
+html,
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background: url("../image/map.jpg");
+    /*background-color: #ffffff;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.hold {
+    padding: 20px;
+    display: block;
+    height: 95%;
+    width: 95%;
+}
+
+.hold .imagebutton{
+    position: absolute;
+    margin: 20px;
+    width: 250px;
+    height: auto;
+    border: none;
+    background-color: transparent;  
+    cursor: pointer;   
+    overflow: hidden;  
+    padding: 5px;
+} 
+
+.hold .imagebutton:hover {  
+    transform: translateY(-4px);
+}  
+
+.hold .imagebutton img {  
+    width: 100%; /* 使图片宽度充满按钮 */  
+    height: auto; /* 保持图片的宽高比 */  
+    display: block; /* 移除图片下方的默认间隙 */  
+}

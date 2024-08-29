@@ -1,7 +1,7 @@
 function bgmstart(){
     let audio = document.getElementById('loginbgm');
     audio.play();
-};
+}
 function toRegister(){
     let a=document.getElementById('loginpage');
     a.style.display="none"
@@ -22,14 +22,16 @@ function Login(){
     } 
     else {
         if (u in localStorage) {
-            let password = localStorage[u];
+            const userd = localStorage.getItem(u);
+            let password = JSON.parse(userd).password;
             if (p === password) {
                 alert("登录成功！");
                 document.getElementById('username').value = "";
                 document.getElementById('password').value = "";
                 localStorage.setItem("current-username", u);
                 window.open('./startgame.html','_self');
-            } else {
+            }
+            else {
                 alert("密码错误");
                 document.getElementById('password').value = "";
             }
@@ -57,7 +59,16 @@ function Register(){
             alert("两次密码并不一致");
         }
         else {
-            localStorage.setItem(u,p1);
+            var userdata = {
+                password:p1,
+                intelligence:20,
+                communication:20,
+                mood:20,
+                physical:20,
+                talent:20,
+                nowround:0,
+            }
+            localStorage.setItem(u,JSON.stringify(userdata));
             alert("注册成功！");
             toLogin();
         }

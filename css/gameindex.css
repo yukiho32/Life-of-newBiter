@@ -1,0 +1,76 @@
+*{
+    font-family: '宋体';
+}
+html {
+    height: 100%;
+    width: 100%;
+    background: url("../image/index.jpg");
+    /*background-color: #ffffff;*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.imagebutton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 20px;
+    width: 300px;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;   
+    overflow: hidden;  
+    padding: 5px;
+}
+
+.imagebutton:hover {  
+    transform: translateY(-4px);
+}
+
+.imagebutton img {  
+    width: 100%;
+    height: auto;
+    display: block; /* 移除图片下方的默认间隙 */  
+}
+
+.progress-container {
+    margin: 20px;
+    /*background-color: yellow;*/
+    /*background-image: url('../image/numBack.png');*/
+    width: 220px;
+    padding: 5px;
+    align-items: center; /* 垂直居中 */  
+}
+.progress-bar {
+    width: 200px; /* 设定进度条的宽度 */  
+    background-color: #ddd;  
+    border-radius: 8px;  
+    overflow: hidden;
+    padding: 2px;
+}
+.progress-fill {
+    height: 20px;
+    text-align: right; /* 如果你想在已完成的部分显示文本 */  
+    padding-right: 5px; /* 为文本留出空间 */  
+    color: white;  
+    border-radius: 8px 0 0 8px;
+    line-height: 20px;  
+    transition: width 0.4s ease-in-out;  
+}  
+.progress-image {  
+    margin: 10px; /* 与进度条保持一定距离 */  
+    height: 30px; /* 保持与进度条相同的高度（如果需要） */  
+    width: auto; /* 图片宽度自适应 */  
+} 
+
+.people{
+    position: absolute;
+    bottom: 0px;
+    left: 600px;
+    width: 350px;
+    height: auto;
+}
