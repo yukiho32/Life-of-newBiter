@@ -13,9 +13,9 @@ body {
     height: 100%;
     width: 100%;
     place-items: center;
-    background: url("../image/loginBackground.jpg");
+    background: url("../image/loginBackground.png");
     /*background-color: #ffffff;*/
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
 }
