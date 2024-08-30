@@ -1,6 +1,6 @@
 
 let nowUser=localStorage.getItem('current-username');
-function ChangeNum(v1,v2,v3,v4,v5,v6){
+function ChangeNum(v1,v2,v3,v4,v5,v6,v7){
     let userd = localStorage.getItem(nowUser);
     let x=JSON.parse(userd);
     x.intelligence+=v1;//智力
@@ -8,7 +8,8 @@ function ChangeNum(v1,v2,v3,v4,v5,v6){
     x.mood+=v3;//心情
     x.physical+=v4;//体能
     x.talent+=v5;//才艺
-    x.nowround+=v6;//当前回合
+    x.nowround += v6;//当前回合
+    x.money += v6 * 50 + v7;
     //alert(x);
     localStorage.setItem(nowUser,JSON.stringify(x));
 }

@@ -4,6 +4,7 @@ function toAchievements(){
 function toAboutUs(){
     location.href = "./AboutUs.html";
 }
+let nowUser=localStorage.getItem('current-username');
 function StartGame(){
     let userd = localStorage.getItem(nowUser);
     let x=JSON.parse(userd);
@@ -12,10 +13,13 @@ function StartGame(){
     x.mood=20;
     x.talent=20;
     x.nowround=0;
-    x.physical=20;
+    x.physical = 20;
+    x.money = 100;
+    localStorage.setItem(nowUser,JSON.stringify(x));
     location.href = "./game/s1/s1.html"
+    
 }
-let nowUser=localStorage.getItem('current-username');
+
 function continuegame(){
     let userd = localStorage.getItem(nowUser);
     let x=JSON.parse(userd);
@@ -24,7 +28,8 @@ function continuegame(){
     x.communication=x.c;
     x.mood=x.m;
     x.physical=x.p;
-    x.talent=x.t;
-    location.href = "./game/gameindex.html";
+    x.talent = x.t;
     localStorage.setItem(nowUser,JSON.stringify(x));
+    location.href = "./game/gameindex.html";
+    
 }
