@@ -6,7 +6,7 @@
     <title>Life of newBiter</title>
     <link rel="stylesheet" href="../../css/gamepage.css" />
     <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/s3/s3.js"></script>
+    <script src="../../js/s4/s4.js"></script>
     <script src="../../js/gamecontroll.js"></script>
     <style>
         .loader {  
@@ -23,6 +23,7 @@
             transition: opacity 3s ease-in-out; /* 可选：遮罩层淡出效果 */  
         }
         .loader .text {  
+            padding: 10%;
             opacity: 0; 
             transition: opacity 2s ease-in-out; /* 文字淡入淡出效果 */ 
             font-size: 24px;  
@@ -56,8 +57,21 @@
         <p id="name"></p>
         <p id="texts"></p>
     </div>
+    <div id="selection_box">
+        <p><input type="button" value="抓紧准备吧，从现在开始还来得及" class="selection" id="option1" onclick="{goto('./s4-1.html'); }"></p>
+        <p><input type="button" value="真不想背单词学英语啊" class="selection" id="option2" onclick="{goto('./s4-1.html'); }"></p>
+    </div>
     <div id="small">
         <img id="small_pic" src="../../image/qq人/tm.png">
+    </div>
+    <div class="left">
+        <img id = "left" src="../../image/qq人/tm.png">
+    </div>
+    <div class="middle">
+        <img id = "middle" src="../../image/qq人/tm.png">
+    </div>
+    <div class="right">
+        <img id = "right" src="../../image/qq人/tm.png">
     </div>
 </body>
 

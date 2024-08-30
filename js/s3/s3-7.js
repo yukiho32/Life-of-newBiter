@@ -3,7 +3,7 @@ var c =
 {
     "type": 0,
 
-    "nextpage": "../gameindex.html",
+    "nextpage": "../s4/s4.html",
 
     "steps": 3,
 

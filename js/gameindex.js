@@ -31,6 +31,33 @@ window.onload = function(){
     if(x.nowround === 10){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s3/s3-2.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s4/s4-2.html.html'); });
     }
+    if(x.nowround === 15){
+        x.nowround+=1;
+        localStorage.setItem(nowUser,JSON.stringify(x));
+        $("body").fadeOut(200, function () { window.location.replace('./s5/s5-1.html.html'); });
+    }
+    if(x.nowround === 19){
+        localStorage.setItem(nowUser,JSON.stringify(x));
+        $("body").fadeOut(200, function () { window.location.replace('./s6/s6.html.html'); });
+    }
+    if(x.nowround === 20){
+        x.nowround+=1;
+        localStorage.setItem(nowUser,JSON.stringify(x));
+        $("body").fadeOut(200, function () { window.location.replace('./s6/s6-1.html.html'); });
+    }
+}
+
+function Save(){
+    let userd = localStorage.getItem(nowUser);
+    let x=JSON.parse(userd);
+    x.saveround=x.nowround;
+    x.i=x.intelligence;
+    x.c=x.communication;
+    x.m=x.mood;
+    x.p=x.physical;
+    x.t=x.talent;
+    localStorage.setItem(nowUser,JSON.stringify(x));
+    alert("保存成功！")
 }

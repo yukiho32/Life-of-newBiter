@@ -69,7 +69,7 @@ function next_big() {
         }
     }
     else {
-        if (c.bigpos[click - 1] != c.bigpos[click ] || c.big[click-1] != c.big[click]) {
+        if (c.bigpos[click - 1] != c.bigpos[click ] || c.big[click-1] != c.big[click] || c.name[click-1] != c.name[click]) {
             $(c.bigpos[click - 1]).hide();
             if (c.big[click] == "none") {
                 document.getElementById(c.bigpos[click]).src = "../../image/qq人/tm.png";

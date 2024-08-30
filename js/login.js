@@ -19,7 +19,7 @@ function Login(){
     let p = document.getElementById('password').value;
     if (u === "" || p === "") {
         alert("请输入您的用户名或密码！");
-    } 
+    }
     else {
         if (u in localStorage) {
             const userd = localStorage.getItem(u);
@@ -62,11 +62,17 @@ function Register(){
             var userdata = {
                 password:p1,
                 intelligence:20,
+                i:20,
                 communication:20,
+                c:20,
                 mood:20,
+                m:20,
                 physical:20,
+                p:20,
                 talent:20,
+                t:20,
                 nowround:0,
+                saveround:0,
             }
             localStorage.setItem(u,JSON.stringify(userdata));
             alert("注册成功！");

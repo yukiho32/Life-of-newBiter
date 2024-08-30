@@ -12,7 +12,7 @@ var c =
 
     "small": ["none", "白特",],
 
-    "big": ["none", "none", ],
+    "big": ["none", "none",],
 
-    "bigpos": ["none", "none",]
+    "bigpos": ["middle", "middle",]
 };
