@@ -31,21 +31,21 @@ window.onload = function(){
     if(x.nowround === 10){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s4/s4-2.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s4/s4-2.html'); });
     }
     if(x.nowround === 15){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s5/s5-1.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s5/s5-1.html'); });
     }
     if(x.nowround === 19){
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s6/s6.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s6/s6.html'); });
     }
     if(x.nowround === 20){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s6/s6-1.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s6/s6-1.html'); });
     }
 }
 
