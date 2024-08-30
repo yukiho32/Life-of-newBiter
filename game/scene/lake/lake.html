@@ -12,6 +12,18 @@
             display: none;
         }
     </style>
+    <script>
+        function randomGoto() {
+            const urls = [
+                { url: './lake-4.html', params: [0, 0, -5, 0, 0, 0, 0] },
+                { url: './lake-3.html', params: [0, 0, 5, 0, 5, 1, 0] }
+            ];
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            const selected = urls[randomIndex];
+            ChangeNum(...selected.params);
+            window.location.href = selected.url;
+        }
+    </script>
 </head>
 
 <body style="background-image: url(../../../image/bg/game/北湖.png);">
@@ -35,7 +47,7 @@
     <div class="circleHintButton" style="bottom: 40%; right: 20%;" id="picnic" onclick="Talkto('picnic')"></div>
     <div class="selection_box" id="Talktopicnic">
         <p><input type="button" value="和朋友一起来野餐" class="selection" id="option5"
-                onclick="{ChangeNum(0,0,5,0,5,1,0);goto('./lake-3.html')}"></p>
+                onclick="{randomGoto()}"></p>
         <p><input type="button" value="再想想" class="selection" id="option6" onclick="Back()"></p>
     </div>
 </body>
