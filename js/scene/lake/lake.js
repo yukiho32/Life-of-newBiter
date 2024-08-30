@@ -9,20 +9,22 @@ function ChangeNum(v1,v2,v3,v4,v5,v6,v7){
     x.physical+=v4;//体能
     x.talent+=v5;//才艺
     x.nowround += v6;
-    x.money += v6 * 50 + v7;
+    x.money += 50 * v6 + v7;
     //alert(x);
     localStorage.setItem(nowUser,JSON.stringify(x));
 }
 
 function Talkto(x){
-    $("#chair").hide();
-    $("#book").hide();
+    $("#fish").hide();
+    $("#picnic").hide();
+    $("#walk").hide();
     $("#Talkto"+x).fadeIn();
 }
 
 function Back(){
-    $("#chair").fadeIn();
-    $("#book").fadeIn();
+    $("#fish").hide();
+    $("#picnic").hide();
+    $("#walk").hide();
     $(".selection_box").hide();
 }
 function goto(apage) {

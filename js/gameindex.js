@@ -10,7 +10,8 @@ window.onload = function(){
     document.getElementById("communication").innerHTML="交际："+x.communication;
     document.getElementById("mood").innerHTML="心情："+x.mood;
     document.getElementById("talent").innerHTML="才华："+x.talent;
-    document.getElementById("physical").innerHTML="体能："+x.physical;
+    document.getElementById("physical").innerHTML = "体能：" + x.physical;
+    document.getElementById("money").innerHTML="零花钱："+x.money;
     document.getElementById("nowround").innerHTML="当前回合："+x.nowround;
     document.getElementById("1").style.width=x.intelligence*2+'%';
     document.getElementById("2").style.width=x.communication*2+'%';
@@ -31,21 +32,21 @@ window.onload = function(){
     if(x.nowround === 10){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s4/s4-2.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s4/s4-2.html'); });
     }
     if(x.nowround === 15){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s5/s5-1.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s5/s5-1.html'); });
     }
     if(x.nowround === 19){
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s6/s6.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s6/s6.html'); });
     }
     if(x.nowround === 20){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
-        $("body").fadeOut(200, function () { window.location.replace('./s6/s6-1.html.html'); });
+        $("body").fadeOut(200, function () { window.location.replace('./s6/s6-1.html'); });
     }
 }
 
@@ -57,7 +58,8 @@ function Save(){
     x.c=x.communication;
     x.m=x.mood;
     x.p=x.physical;
-    x.t=x.talent;
+    x.t = x.talent;
+    x.mo = x.money;
     localStorage.setItem(nowUser,JSON.stringify(x));
     alert("保存成功！")
 }

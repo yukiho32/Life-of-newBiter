@@ -14,6 +14,7 @@ function StartGame(){
     x.talent=20;
     x.nowround=0;
     x.physical = 20;
+    x.money = 100;
     localStorage.setItem(nowUser,JSON.stringify(x));
     location.href = "./game/s1/s1.html"
     
