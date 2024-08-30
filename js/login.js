@@ -70,7 +70,9 @@ function Register(){
                 physical:20,
                 p:20,
                 talent:20,
-                t:20,
+                t: 20,
+                money: 100,
+                mo:100,
                 nowround:0,
                 saveround:0,
             }

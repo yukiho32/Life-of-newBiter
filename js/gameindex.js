@@ -10,7 +10,8 @@ window.onload = function(){
     document.getElementById("communication").innerHTML="交际："+x.communication;
     document.getElementById("mood").innerHTML="心情："+x.mood;
     document.getElementById("talent").innerHTML="才华："+x.talent;
-    document.getElementById("physical").innerHTML="体能："+x.physical;
+    document.getElementById("physical").innerHTML = "体能：" + x.physical;
+    document.getElementById("money").innerHTML="零花钱："+x.money;
     document.getElementById("nowround").innerHTML="当前回合："+x.nowround;
     document.getElementById("1").style.width=x.intelligence*2+'%';
     document.getElementById("2").style.width=x.communication*2+'%';
@@ -57,7 +58,8 @@ function Save(){
     x.c=x.communication;
     x.m=x.mood;
     x.p=x.physical;
-    x.t=x.talent;
+    x.t = x.talent;
+    x.mo = x.money;
     localStorage.setItem(nowUser,JSON.stringify(x));
     alert("保存成功！")
 }
