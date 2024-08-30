@@ -1,0 +1,60 @@
+技术方案
+本游戏的登录界面，开始游戏界面，关于我们界面，成就界面的html文件都在根目录下。
+站点结构如下：
+├─bgm
+├─css
+├─game
+│  ├─s1
+│  ├─s2
+│  ├─s3
+│  ├─s4
+│  ├─s5
+│  └─scene
+│      ├─library
+│      ├─playground
+│      └─teaching
+├─image
+│  ├─bg
+│  │  ├─game
+│  │  └─setting
+│  ├─button
+│  │  ├─botton
+│  │  ├─number botton
+│  │  └─title
+│  ├─character
+│  │  ├─eqcode
+│  │  ├─学姐
+│  │  ├─学生
+│  │  ├─徐熙浩
+│  │  ├─教官
+│  │  ├─白特
+│  │  ├─社长
+│  │  ├─老师
+│  │  ├─通用人物
+│  │  ├─陈继华
+│  │  └─靶场
+│  ├─IntroductionPeople
+│  ├─qq人
+│  └─属性图标
+├─introduction
+├─jb
+├─js
+│  ├─s1
+│  ├─s2
+│  ├─s3
+│  ├─s4
+│  ├─s5
+│  └─scene
+│      ├─library
+│      ├─playground
+│      └─teaching
+└─mini_game
+    ├─css
+    └─js
+游戏主体的所有的js文件都放在js文件夹下，css文件都放在css文件夹下，图片素材都在image文件夹下。minigame单独一个文件夹。jb文件夹里面是中文剧本。
+
+存档数据，和用户数据均使用localStorage储存，全部都放在一个结构体里面。
+
+页面跳转、改变数值、推进时间和剧情均使用js代码控制，避免了用户误触浏览器的返回键后引起不必要的麻烦。
+
+为了确保网站的响应式，我们对大部分的样式都使用了flex布局和float布局。此外，对于有些还是有问题的界面多写了一份css。
