@@ -1,5 +1,4 @@
 
-
 var count = c.steps;//总点击次数
 var pagename = c.nextpage;
 var page_type = c.type;//场景类型：0为自动跳转，1为分支选择，2为结局决定

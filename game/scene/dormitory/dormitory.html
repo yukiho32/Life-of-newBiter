@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>life of a newBiter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/scene.css">
+    <script src="../../../js/jquery-3.6.0.js"></script>
+    <script src="../../../js/scene/dormitory/dormitory.js"></script>
+    <style>
+        .selection_box {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(../../../image/bg/game/宿舍.png);">
+	<div class="imagebutton" style="top: 0px;left: 0px;width: 80px;" onclick="goto('../../map.html')"><img src="../../../image/button/botton/back.png"></div>
+	
+    <div class="circleHintButton" style="bottom: 35%; right: 35%;" id="desk" onclick="Talkto('desk')"></div>
+    <div class="selection_box" id="Talktodesk">
+        <p><input type="button" value="在宿舍自习" class="selection" id="option1"
+                onclick="{ChangeNum(7,0,-5,0,0,1);goto('./dormitory-1.html')}"></p>
+        <p><input type="button" value="玩儿会游戏" class="selection" id="option2"
+                onclick="{ChangeNum(-2,0,8,0,0,1);goto('./dormitory-2.html')}"></p>
+        <p><input type="button" value="起来走走" class="selection" id="option3" 
+                onclick="Back()"></p>
+    </div>
+
+    <div class="imagebutton" style="bottom: 30%;left: 10%;width: 160px;" onclick="Talkto('roommate')">
+        <img src="../../../image/character/学生/学生.png" id="roommate">
+    </div>
+    <div class="selection_box" id="Talktoroommate">
+        <p><input type="button" value="和室友聊聊天" class="selection" id="option4"
+                onclick="{ChangeNum(0,4,4,0,0,1);goto('./dormitory-3.html')}"></p>
+        <p><input type="button" value="和室友讨论学习" class="selection" id="option5" 
+                onclick="ChangeNum(4,4,0,0,0,1);goto('./dormitory-4.html')"></p>
+        <p><input type="button" value="出去走走" class="selection" id="option6" 
+                onclick="goto('./dormitory-5.html')"></p>
+    </div>
+</body>
+
+</html>
