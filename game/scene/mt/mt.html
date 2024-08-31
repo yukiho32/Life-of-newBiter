@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>life of a newBiter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/scene.css">
+    <script src="../../../js/jquery-3.6.0.js"></script>
+    <script src="../../../js/scene/mt/mt.js"></script>
+    <style>
+        .selection_box {
+            display: none;
+        }
+    </style>
+    <script>
+        function randomGoto() {
+            const urls = [
+                { url: './mt-2.html', params: [0, 3, -5, 0, 0, 1, 600] },
+                { url: './mt-2-2.html', params: [0, 0, 0, 0, 0, 0, 0] }
+            ];
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            const selected = urls[randomIndex];
+            ChangeNum(...selected.params);
+            window.location.href = selected.url;
+        }
+    </script>
+</head>
+
+<body style="background-image: url(../../../image/bg/game/奶茶店.png)">
+    <div class="imagebutton" style="top: 0px;left: 0px;width: 80px;" onclick="goto('../../map.html')"><img
+            src="../../../image/button/botton/back.png"></div>
+
+    <div class="imagebutton" style="bottom: 30%;right: 30%;width: 200px;" onclick="Talkto('shopping')">
+        <img src="../../../image/character/通用人物/通用人物.png" id="shopping">
+    </div>
+    <div class="selection_box" id="Talktoshopping">
+        <p><input type="button" value="喝奶茶（消耗400元）" class="selection" id="option4"
+                onclick="{ChangeNum(0,0,6,0,0,1,-300);goto('./mt-1.html')}"></p>
+        <p><input type="button" value="打小时工" class="selection" id="option5"
+                onclick="randomGoto()"></p>
+        <p><input type="button" value="离开" class="selection" id="option5"
+                onclick="ChangeNum(0,0,0,0,0,0,0);goto('./mt-3.html')"></p>
+    </div>
+</body>
+
+</html>
