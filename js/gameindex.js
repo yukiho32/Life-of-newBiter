@@ -40,6 +40,7 @@ window.onload = function(){
         $("body").fadeOut(200, function () { window.location.replace('./s5/s5-1.html'); });
     }
     if(x.nowround === 19){
+        x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
         $("body").fadeOut(200, function () { window.location.replace('./s6/s6.html'); });
     }
