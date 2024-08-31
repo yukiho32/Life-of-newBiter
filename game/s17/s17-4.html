@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Life of newBiter</title>
+    <link rel="stylesheet" href="../../css/gamepage.css" />
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/s17/s17-4.js"></script>
+    <script src="../../js/gamecontroll.js"></script>
+    <style>
+        body, html {  
+            margin: 0; 
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .dialog {
+          display: none;
+        }
+        #selection_box {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('../../image/bg/game/音乐教室黄昏.png');">
+    <div class="loader" id="loader">
+        <div class="text">这场比赛，你明白，这不只是你与赵文妍纠缠不清的过往的结束，更是你向张润远许诺的未来的开始。你能感受到肩上的担子一下子变得沉重起来，那是一份叫做男人的责任感</div>
+    </div>
+    <div class="dialog" onclick="{next_move();}"></div>
+    <div id="text-box" onclick="{next_move();}">
+        <p id="name"></p>
+        <p id="texts"></p>
+    </div>
+    <div id="small">
+        <img id="small_pic" src="../../image/qq人/tm.png">
+    </div>
+    <div class="left">
+        <img id = "left" src="../../image/qq人/tm.png">
+    </div>
+    <div class="middle">
+        <img id = "middle" src="../../image/qq人/tm.png">
+    </div>
+    <div class="right">
+        <img id = "right" src="../../image/qq人/tm.png">
+    </div>
+</body>
+
+</html>

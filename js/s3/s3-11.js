@@ -1,4 +1,9 @@
 alert("达成成就：天籁之音");
+let a=localStorage.getItem('current-username');
+let userd = localStorage.getItem(a);
+let x=JSON.parse(userd);
+x.club=2;
+localStorage.setItem(a,JSON.stringify(x));
 var c =
 {
     "type": 1,

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Life of newBiter</title>
+    <link rel="stylesheet" href="../../css/gamepage.css" />
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/s9/s9-1.js"></script>
+    <script src="../../js/gamecontroll.js"></script>
+    <style>
+        body, html {  
+            margin: 0; 
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .dialog {
+          display: none;
+        }
+        #selection_box {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('../../image/bg/game/操场.png');">
+    <div class="loader" id="loader">
+        <div class="text">直到到你上场你也不明白为什么当初陈继华帮你报了1000米项目，明明你已经告诉过他你不擅长跑步，可他还是这么做，你只记得他这样说过：“人生就像这场跑步，现在你遇到烦心事了，那就不顾一切地向前冲刺，不停地冲刺，这样所有烦恼都会被你抛在脑后，最后当你抵达终点时，你早已忘却那些，唯余汗水与爽意。”</div>
+    </div>
+    <div class="dialog" onclick="{next_move();}"></div>
+    <div id="text-box" onclick="{next_move();}">
+        <p id="name"></p>
+        <p id="texts"></p>
+    </div>
+    <div id="selection_box">
+        <p><input type="button" value="相信自己，不就是1000米嘛，你能行的" class="selection" id="option1" onclick="{goto('./s9-2.html'); }"></p>
+        <p><input type="button" value="没关系，反正也不求名次，就像他说的好好享受就行了" class="selection" id="option2" onclick="{goto('./s9-2.html'); }"></p>
+    </div>
+    <div id="small">
+        <img id="small_pic" src="../../image/qq人/tm.png">
+    </div>
+    <div class="left">
+        <img id = "left" src="../../image/qq人/tm.png">
+    </div>
+    <div class="middle">
+        <img id = "middle" src="../../image/qq人/tm.png">
+    </div>
+    <div class="right">
+        <img id = "right" src="../../image/qq人/tm.png">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Life of newBiter</title>
+    <link rel="stylesheet" href="../../css/gamepage.css" />
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/s15/s15-2.js"></script>
+    <script src="../../js/gamecontroll.js"></script>
+    <style>
+        body, html {  
+            margin: 0; 
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .dialog {
+          display: none;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('../../image/bg/game/地铁.png')">
+    <div class="loader" id="loader">
+        <div class="text">你坐上地铁到达集合点，此次活动共有6名志愿者，经过打听，你发现其中一位女生竟然是你的学妹，是这一届的大一新生。这下陌生的尴尬感算是得到了缓解</div>
+    </div>
+    <div class="dialog" onclick="{next_move();}"></div>
+    <div id="text-box" onclick="{next_move();}">
+        <p id="name"></p>
+        <p id="texts"></p>
+    </div>
+    <div id="small">
+        <img id="small_pic" src="../../image/qq人/tm.png">
+    </div>
+    <div class="left">
+        <img id = "left" src="../../image/qq人/tm.png">
+    </div>
+    <div class="middle">
+        <img id = "middle" src="../../image/qq人/tm.png">
+    </div>
+    <div class="right">
+        <img id = "right" src="../../image/qq人/tm.png">
+    </div>
+</body>
+
+</html>

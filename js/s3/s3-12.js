@@ -1,3 +1,8 @@
+let a=localStorage.getItem('current-username');
+let userd = localStorage.getItem(a);
+let x=JSON.parse(userd);
+x.club=3;
+localStorage.setItem(a,JSON.stringify(x));
 var c =
 {
     "type": 1,

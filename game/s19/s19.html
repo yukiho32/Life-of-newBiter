@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Life of newBiter</title>
+    <link rel="stylesheet" href="../../css/gamepage.css" />
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/s19/s19.js"></script>
+    <script src="../../js/gamecontroll.js"></script>
+    <style>
+        body, html {  
+            margin: 0; 
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .dialog {
+          display: none;
+        }
+        #selection_box {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('../../image/bg/game/宿舍.png');">
+    <div class="loader" id="loader">
+        <div class="text">不同于以往总是在最后一两天回到学校，这次你早早地便回来了。不是因为其他原因，而是你要专心应对开学五周后的竞赛，这场竞赛的结果将决定你未来的发展</div>
+    </div>
+    <div class="dialog" onclick="{next_move();}"></div>
+    <div id="text-box" onclick="{next_move();}">
+        <p id="name"></p>
+        <p id="texts"></p>
+    </div>
+    <div id="small">
+        <img id="small_pic" src="../../image/qq人/tm.png">
+    </div>
+    <div class="left">
+        <img id = "left" src="../../image/qq人/tm.png">
+    </div>
+    <div class="middle">
+        <img id = "middle" src="../../image/qq人/tm.png">
+    </div>
+    <div class="right">
+        <img id = "right" src="../../image/qq人/tm.png">
+    </div>
+</body>
+
+</html>

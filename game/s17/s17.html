@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Life of newBiter</title>
+    <link rel="stylesheet" href="../../css/gamepage.css" />
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/s17/s17.js"></script>
+    <script src="../../js/gamecontroll.js"></script>
+    <style>
+        body, html {  
+            margin: 0; 
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .dialog {
+          display: none;
+        }
+        #selection_box {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('../../image/bg/game/教学楼2黄昏.png');">
+    <div class="loader" id="loader">
+        <div class="text">这段时间除了继续与陈继华联系，询问徐熙浩的情况外，你也帮助张润远解决了几件棘手的问题，你感到生活比以往充实许多。这天，你在路上偶然遇见了一个你几乎快要忘掉的人</div>
+    </div>
+    <div class="dialog" onclick="{next_move();}"></div>
+    <div id="text-box" onclick="{next_move();}">
+        <p id="name"></p>
+        <p id="texts"></p>
+    </div>
+    <div id="small">
+        <img id="small_pic" src="../../image/qq人/tm.png">
+    </div>
+    <div class="left">
+        <img id = "left" src="../../image/qq人/tm.png">
+    </div>
+    <div class="middle">
+        <img id = "middle" src="../../image/qq人/tm.png">
+    </div>
+    <div class="right">
+        <img id = "right" src="../../image/qq人/tm.png">
+    </div>
+</body>
+
+</html>

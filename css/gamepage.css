@@ -139,7 +139,7 @@ body{
     width:auto;
 }
 .selection{
-    width: 600px; 
+    width: 800px; 
     height:auto;
     margin-top: 20px;
     padding: 25px;
@@ -360,6 +360,7 @@ body{
     transition: opacity 2s ease-in-out; /* 可选：遮罩层淡出效果 */  
 }
 .loader .text {  
+    text-align: center;
     padding: 10%;
     opacity: 0; 
     transition: opacity 1s ease-in-out; /* 文字淡入淡出效果 */ 
