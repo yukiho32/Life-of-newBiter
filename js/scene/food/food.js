@@ -14,14 +14,14 @@ function ChangeNum(v1,v2,v3,v4,v5,v6,v7){
 }
 
 function Talkto(x){
-    $("#jieji").hide();
-    $("#pacman").hide();
+    $("#one").hide();
+    $("#friend").hide();
     $("#Talkto"+x).fadeIn();
 }
 
 function Back(){
-    $("#jieji").fadeIn();
-    $("#pacman").fadeIn();
+    $("#one").fadeIn();
+    $("#friend").fadeIn();
     $(".selection_box").hide();
 }
 function goto(apage) {

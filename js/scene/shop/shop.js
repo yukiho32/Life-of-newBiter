@@ -1,3 +1,4 @@
+
 let nowUser=localStorage.getItem('current-username');
 function ChangeNum(v1,v2,v3,v4,v5,v6,v7){
     let userd = localStorage.getItem(nowUser);
@@ -14,14 +15,14 @@ function ChangeNum(v1,v2,v3,v4,v5,v6,v7){
 }
 
 function Talkto(x){
-    $("#jieji").hide();
-    $("#pacman").hide();
+    $("#one").hide();
+    $("#all").hide();
     $("#Talkto"+x).fadeIn();
 }
 
 function Back(){
-    $("#jieji").fadeIn();
-    $("#pacman").fadeIn();
+    $("#one").fadeIn();
+    $("#all").fadeIn();
     $(".selection_box").hide();
 }
 function goto(apage) {
