@@ -4,39 +4,43 @@
 <head>
     <meta charset="utf-8" />
     <title>Life of newBiter</title>
-    <link rel="stylesheet" href="../../css/gamepage.css" />
-    <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/s1/s1.js"></script>
-    <script src="../../js/gamecontroll.js"></script>
+    <link rel="stylesheet" href="../../../css/gamepage.css" />
+    <script src="../../../js/jquery-3.6.0.js"></script>
+    <script src="../../../js/scene/gym/gym-2.js"></script>
+    <script src="../../../js/sgamecontroll.js"></script>
     <style>
         #selection_box {
             display: none;
         }
     </style>
+    <script>
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+            let x = JSON.parse(userd);
+            if (x.money - cost < 0) {
+                goto(page);
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
-<body style="background-image: url('../../image/loginBackground.jpg');">
+<body style="background-image: url('../../../image/bg/game/体育馆.png');">
     <div class="dialog" onclick="{next_move();}"></div>
     <div id="text-box" onclick="{next_move();}">
         <p id="name"></p>
         <p id="texts"></p>
     </div>
-    <div id="small">
-        <img id="small_pic" src="../../image/qq人/tm.png">
-    </div>
     <div id="selection_box">
-        <p><input type="button" value="嗯，一切都在往好的方向前进" class="selection" id="option1" onclick="{goto('s1-2.html');}"></p>
-        <p><input type="button" value="刚刚进入大学，一切都还陌生，要多加留意。" class="selection" id="option2"
-                onclick="{goto('s1-2.html'); }"></p>
+        <p><input type="button" value="给我来十发子弹（消耗300元）" class="selection" id="option1" onclick="if (checkMoneyAndGoto(300, './break.html')) {ChangeNum(0,0,0,0,0,1,-300);goto('../../../mini_game/Shoot.html');}"></p>
+        <p><input type="button" value="不了，我再到处看看吧" class="selection" id="option2" onclick="{goto('./gym.html'); }"></p>
     </div>
-    <div class="left">
-        <img id="left" src="../../image/qq人/tm.png">
+    <div id="small">
+        <img id="small_pic" src="../../../image/qq人/tm.png">
     </div>
     <div class="middle">
-        <img id="middle" src="../../image/qq人/tm.png">
-    </div>
-    <div class="right">
-        <img id="right" src="../../image/qq人/tm.png">
+        <img id="middle" src="../../../image/qq人/tm.png">
     </div>
 </body>
 

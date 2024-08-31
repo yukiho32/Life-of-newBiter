@@ -3,7 +3,7 @@ html, body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-image: url(../../image/loginBackground.jpg);
+    background-image: url(../../image/bg/game/电玩城.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -26,7 +26,7 @@ html, body {
 h1 {
     font-family: 'Permanent Marker', cursive;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 a {
@@ -36,7 +36,7 @@ a {
 
 .game-info {
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 #endScreen {

@@ -12,6 +12,17 @@
             display: none;
         }
     </style>
+    <script>
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+            let x = JSON.parse(userd);
+            if (x.money - cost < 0) {
+                goto(page);
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body style="background-image: url(../../../image/bg/game/体育馆.png)">
@@ -26,7 +37,7 @@
     </div>
 
     <div class="imagebutton" style="bottom: 40%;left: 15%;width: 160px;" onclick="goto('./gym-2.html')">
-        <img src="../../../image/character/靶场/靶场.png" id="shoot">
+        <img src="../../../image/character/靶场管理员/靶场管理员.png" id="shoot">
     </div>
 
     <div class="imagebutton" style="bottom: 30%;right: 10%;width: 160px;" onclick="Talkto('PEteacher')">
