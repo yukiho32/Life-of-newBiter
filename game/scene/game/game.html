@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>life of a newBiter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/scene.css">
+    <script src="../../../js/jquery-3.6.0.js"></script>
+    <script src="../../../js/scene/dormitory/dormitory.js"></script>
+    <style>
+        .selection_box {
+            display: none;
+        }
+    </style>
+    <script>
+        function randomGoto() {
+            const urls = [
+                { url: './lake-4.html', params: [0, 0, -5, 0, 0, 0, 0] },
+                { url: './lake-3.html', params: [0, 0, 5, 0, 5, 1, 0] }
+            ];
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            const selected = urls[randomIndex];
+            ChangeNum(...selected.params);
+            window.location.href = selected.url;
+        }
+    </script>
+</head>
+
+<body style="background-image: url(../../../image/bg/game/电玩城.png);">
+    <div class="imagebutton" style="top: 0px;left: 0px;width: 80px;" onclick="goto('../../map.html')"><img
+            src="../../../image/button/botton/back.png"></div>
+
+    <div class="circleHintButton" style="bottom: 40%; right: 80%;" id="jieji" onclick="Talkto('jieji')"></div>
+    <div class="selection_box" id="Talktojieji">
+        <p><input type="button" value="打街机游戏（消耗300元）" class="selection" id="option1"
+                onclick="{ChangeNum(-2,0,6,0,0,1,-300);goto('./game-1.html')}"></p>
+        <p><input type="button" value="不玩了不玩了.." class="selection" id="option1"
+                onclick="{ChangeNum(-0,0,0,0,0,0,0);goto('./game-2.html')}"></p>
+        <p><input type="button" value="再想想" class="selection" id="option2" onclick="Back()"></p>
+    </div>
+
+    <div class="circleHintButton" style="bottom: 30%; right: 10%;" id="pacman" onclick="Talkto('pacman')"></div>
+    <div class="selection_box" id="Talktopacman">
+        <p><input type="button" value="玩爆款吃豆人（消耗500元）" class="selection" id="option3"
+                onclick="{ChangeNum(0,0,0,0,0,1,-500);goto('./game-3.html')}"></p>      <!-- 数值未定 -->
+        <p><input type="button" value="不玩了不玩了.." class="selection" id="option1"
+                onclick="{ChangeNum(0,0,0,0,0,0,0);goto('./game-2.html')}"></p>
+        <p><input type="button" value="再想想" class="selection" id="option4" onclick="Back()"></p>
+    </div>
+
+</body>
+
+</html>
