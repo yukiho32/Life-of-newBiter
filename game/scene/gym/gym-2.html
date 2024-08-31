@@ -13,6 +13,17 @@
             display: none;
         }
     </style>
+    <script>
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+            let x = JSON.parse(userd);
+            if (x.money - cost < 0) {
+                goto(page);
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body style="background-image: url('../../../image/bg/game/体育馆.png');">
@@ -22,7 +33,7 @@
         <p id="texts"></p>
     </div>
     <div id="selection_box">
-        <p><input type="button" value="给我来十发子弹（消耗300元）" class="selection" id="option1" onclick="{ChangeNum(0,0,0,0,0,1,-300);goto('../../../mini_game/Shoot.html');}"></p>
+        <p><input type="button" value="给我来十发子弹（消耗300元）" class="selection" id="option1" onclick="if (checkMoneyAndGoto(300, './break.html')) {ChangeNum(0,0,0,0,0,1,-300);goto('../../../mini_game/Shoot.html');}"></p>
         <p><input type="button" value="不了，我再到处看看吧" class="selection" id="option2" onclick="{goto('./gym.html'); }"></p>
     </div>
     <div id="small">

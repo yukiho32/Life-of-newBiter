@@ -23,6 +23,15 @@
             ChangeNum(...selected.params);
             window.location.href = selected.url;
         }
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+        let x = JSON.parse(userd);
+        if (x.money - cost < 0) {
+            goto(page);
+        return false;
+            }
+        return true;
+        }
     </script>
 </head>
 
@@ -39,8 +48,8 @@
 
     <div class="circleHintButton" style="bottom: 20%; right: 50%;" id="fish" onclick="Talkto('fish')"></div>
     <div class="selection_box" id="Talktofish">
-        <p><input type="button" value="用面包喂鱼" class="selection" id="option3"
-                onclick="{ChangeNum(0,0,3,0,3,1,-150);goto('./lake-2.html')}"></p>
+        <p><input type="button" value="用面包喂鱼（消耗150元）" class="selection" id="option3"
+                onclick="if (checkMoneyAndGoto(150, './break.html')){ChangeNum(0,0,3,0,3,1,-150);goto('./lake-2.html')}"></p>
         <p><input type="button" value="再想想" class="selection" id="option4" onclick="Back()"></p>
     </div>
 

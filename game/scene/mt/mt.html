@@ -23,6 +23,15 @@
             ChangeNum(...selected.params);
             window.location.href = selected.url;
         }
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+            let x = JSON.parse(userd);
+            if (x.money - cost < 0) {
+                goto(page);
+                return false;
+            }
+            return true;
+        }
     </script>
 </head>
 
@@ -30,12 +39,12 @@
     <div class="imagebutton" style="top: 0px;left: 0px;width: 80px;" onclick="goto('../../map.html')"><img
             src="../../../image/button/botton/back.png"></div>
 
-    <div class="imagebutton" style="bottom: 30%;right: 30%;width: 200px;" onclick="Talkto('shopping')">
-        <img src="../../../image/character/通用人物/通用人物.png" id="shopping">
+    <div class="imagebutton" style="bottom: 20%;right: 30%;width: 350px;" onclick="Talkto('shopping')">
+        <img src="../../../image/character/店员/店员.png" id="shopping">
     </div>
     <div class="selection_box" id="Talktoshopping">
         <p><input type="button" value="喝奶茶（消耗400元）" class="selection" id="option4"
-                onclick="{ChangeNum(0,0,6,0,0,1,-300);goto('./mt-1.html')}"></p>
+                onclick="if (checkMoneyAndGoto(400, './break.html')){ChangeNum(0,0,6,0,0,1,-400);goto('./mt-1.html')}"></p>
         <p><input type="button" value="打小时工" class="selection" id="option5"
                 onclick="randomGoto()"></p>
         <p><input type="button" value="离开" class="selection" id="option5"

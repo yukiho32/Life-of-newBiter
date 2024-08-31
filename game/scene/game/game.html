@@ -23,6 +23,16 @@
             ChangeNum(...selected.params);
             window.location.href = selected.url;
         }
+
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+            let x = JSON.parse(userd);
+            if (x.money - cost < 0) {
+                goto(page);
+                return false;
+            }
+            return true;
+            }
     </script>
 </head>
 

@@ -12,6 +12,17 @@
             display: none;
         }
     </style>
+    <script>
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+            let x = JSON.parse(userd);
+            if (x.money - cost < 0) {
+                goto(page);
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body style="background-image: url(../../../image/bg/game/饭馆.png);">
@@ -21,7 +32,7 @@
     <div class="circleHintButton" style="bottom: 25%; right: 70%;" id="one" onclick="Talkto('one')"></div>
     <div class="selection_box" id="Talktoone">
         <p><input type="button" value="一个人搓一顿（消耗500元）" class="selection" id="option1"
-                onclick="{ChangeNum(0,0,4,3,0,1,-500);goto('./food-1.html')}"></p>
+                onclick="if (checkMoneyAndGoto(500, './break.html')) {ChangeNum(0,0,4,3,0,1,-500);goto('./food-1.html')}"></p>
         <p><input type="button" value="离开" class="selection" id="option1"
                 onclick="{ChangeNum(-0,0,0,0,0,0,0);goto('./food-3.html')}"></p>
     </div>
@@ -29,7 +40,7 @@
     <div class="circleHintButton" style="bottom: 30%; right: 20%;" id="friend" onclick="Talkto('friend')"></div>
     <div class="selection_box" id="Talktofriend">
         <p><input type="button" value="约朋友一起聚聚（消耗800元）" class="selection" id="option3"
-                onclick="{ChangeNum(0,4,6,2,0,1,-800);goto('./food-2.html')}"></p>
+                onclick="if (checkMoneyAndGoto(800, './break.html')) {ChangeNum(0,4,6,2,0,1,-800);goto('./food-2.html')}"></p>
         <p><input type="button" value="离开" class="selection" id="option1"
                 onclick="{ChangeNum(0,0,0,0,0,0,0);goto('./food-3.html')}"></p>
     </div>
