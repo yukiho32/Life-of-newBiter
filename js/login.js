@@ -77,6 +77,8 @@ function Register(){
                 saveround:0,
                 club:0,
                 cl:0,
+                finalchoice:0,
+                fc:0,
             }
             localStorage.setItem(u,JSON.stringify(userdata));
             alert("注册成功！");

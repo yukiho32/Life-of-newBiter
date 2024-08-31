@@ -6,7 +6,7 @@
     <title>Life of newBiter</title>
     <link rel="stylesheet" href="../../css/gamepage.css" />
     <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/s21/s21-5.js"></script>
+    <script src="../../js/s23/s23.js"></script>
     <script src="../../js/gamecontroll.js"></script>
     <style>
         body, html {  
@@ -27,12 +27,16 @@
 
 <body style="background-image: url('../../image/bg/game/宿舍.png');">
     <div class="loader" id="loader">
-        <div class="text">你最终选择不做选择，与其考虑这么多，不如自己决定自己的假期，是玩也好，学也好，至少假期在自己手中。或许会因此失去一些机会，但你更想做到不靠这些机会也能成功，这样不更爽更酷吗</div>
+        <div class="text">正当你以为此后的生活将要平平无奇时，陈继华带着一个好消息突然打破了这份宁静</div>
     </div>
     <div class="dialog" onclick="{next_move();}"></div>
     <div id="text-box" onclick="{next_move();}">
         <p id="name"></p>
         <p id="texts"></p>
+    </div>
+    <div id="selection_box">
+        <p><input type="button" value="相信自己，不就是1000米嘛，你能行的" class="selection" id="option1" onclick="{goto('./s9-2.html'); }"></p>
+        <p><input type="button" value="没关系，反正也不求名次，就像他说的好好享受就行了" class="selection" id="option2" onclick="{goto('./s9-2.html'); }"></p>
     </div>
     <div id="small">
         <img id="small_pic" src="../../image/qq人/tm.png">

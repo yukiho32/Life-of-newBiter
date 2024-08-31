@@ -132,6 +132,22 @@ window.onload = function(){
         localStorage.setItem(nowUser,JSON.stringify(x));
         $("body").fadeOut(200, function () { window.location.replace('./s21/s21-1.html'); });
     }
+    if(x.nowround === 72){
+        x.nowround+=1;
+        localStorage.setItem(nowUser,JSON.stringify(x));
+        if(x.club === 1) $("body").fadeOut(200, function () { window.location.replace('./s22/s22.html'); });
+        else $("body").fadeOut(200, function () { window.location.replace('./s22/s22-1.html'); });
+    }
+    if(x.nowround === 76){
+        x.nowround+=1;
+        localStorage.setItem(nowUser,JSON.stringify(x));
+        $("body").fadeOut(200, function () { window.location.replace('./s23/s23.html'); });
+    }
+    if(x.nowround === 81){
+        x.nowround+=1;
+        localStorage.setItem(nowUser,JSON.stringify(x));
+        $("body").fadeOut(200, function () { window.location.replace('./s24/s24-1.html'); });
+    }
 }
 
 function Save(){

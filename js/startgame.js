@@ -16,6 +16,7 @@ function StartGame(){
     x.physical = 20;
     x.money = 100;
     x.club=0;
+    x.finalchoice=0;
     localStorage.setItem(nowUser,JSON.stringify(x));
     location.href = "./game/s1/s1.html"
     
@@ -31,6 +32,7 @@ function continuegame(){
     x.physical=x.p;
     x.talent = x.t;
     x.club=x.cl;
+    x.fc=x.finalchoice;
     localStorage.setItem(nowUser,JSON.stringify(x));
     location.href = "./game/gameindex.html";
     
