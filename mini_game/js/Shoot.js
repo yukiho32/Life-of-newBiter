@@ -157,11 +157,6 @@ function initializeGame() {
 
 initializeGame();
 
-//返回地址
-returnButton.addEventListener('click', () => {
-    window.location.href = '#'; 
-});
-
 gameArea.addEventListener('mousemove', (e) => {
     const containerRect = gameArea.getBoundingClientRect();
     const isInside = e.clientX >= containerRect.left &&

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>life of a newBiter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/scene.css">
+    <script src="../../../js/jquery-3.6.0.js"></script>
+    <script src="../../../js/scene/dinningHall/dinningHall.js"></script>
+    <style>
+        .selection_box {
+            display: none;
+        }
+    </style>
+    <script>
+        function randomGoto() {
+            const urls = [
+                { url: './d-1.html', params: [0, 3, 5, 2, 0, 1, -300] },
+                { url: './d-2.html', params: [0, -3, 5, 1, 0, 1, -300] }
+            ];
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            const selected = urls[randomIndex];
+            ChangeNum(...selected.params);
+            window.location.href = selected.url;
+        }
+        function checkMoneyAndGoto(cost, page) {
+            let userd = localStorage.getItem(nowUser);
+            let x = JSON.parse(userd);
+            if (x.money - cost < 0) {
+                goto(page);
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body style="background-image: url(../../../image/bg/game/食堂.png);">
+    <div class="imagebutton" style="top: 0px;left: 0px;width: 80px;" onclick="goto('../../map.html')"><img
+            src="../../../image/button/botton/back.png"></div>
+
+    <div class="circleHintButton" style="bottom: 25%; right: 10%;" id="desk" onclick="Talkto('desk')"></div>
+    <div class="selection_box" id="Talktodesk">
+        <p><input type="button" value="简单吃点（消耗500元）" class="selection" id="option3"
+                onclick="if (checkMoneyAndGoto(500, './break.html')){ChangeNum(0,0,3,4,0,1,-500);goto('./d-4.html')}">
+        </p>
+        <p><input type="button" value="大吃一顿（消耗800元）" class="selection" id="option3"
+                onclick="if (checkMoneyAndGoto(800, './break.html')){ChangeNum(0,0,5,5,0,1,-800);goto('./d-5.html')}">
+        </p>
+        <p><input type="button" value="好像还不饿" class="selection" id="option4" 
+                onclick="{goto('./d-6.html')}"></p>
+    </div>
+
+    <div class="imagebutton" style="bottom: 10%;right: 60%;width: 350px;" onclick="Talkto('ayi')">
+        <img src="../../../image/character/食堂阿姨/食堂阿姨.png" id="ayi">
+    </div>
+    <div class="selection_box" id="Talktoayi">
+        <p><input type="button" value="请食堂阿姨多给两块肉（消耗300元）" class="selection" id="option4"
+                onclick="if (checkMoneyAndGoto(300, './break.html')) {randomGoto()}"></p>
+         <p><input type="button" value="去别的窗口看看" class="selection" id="option3" 
+                onclick="{goto('./d-3.html')}"></p>
+    </div>
+
+</body>
+
+</html>

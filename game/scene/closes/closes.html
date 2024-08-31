@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>life of a newBiter</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/scene.css">
+    <script src="../../../js/jquery-3.6.0.js"></script>
+    <script src="../../../js/scene/closes/closes.js"></script>
+    <style>
+        .selection_box {
+            display: none;
+        }
+    </style>
+    <script>
+        function checkMoneyAndGoto(cost, page) {
+                let userd = localStorage.getItem(nowUser);
+                let x = JSON.parse(userd);
+                if (x.money - cost < 0) {
+                    goto(page);
+                    return false;
+                }
+                return true;
+            }
+    </script>
+</head>
+
+<body style="background-image: url(../../../image/bg/game/服装店.png)">
+    <div class="imagebutton" style="top: 0px;left: 0px;width: 80px;" onclick="goto('../../map.html')"><img
+            src="../../../image/button/botton/back.png"></div>
+
+    <div class="imagebutton" style="bottom: 10%;right: 40%;width: 400px;" onclick="Talkto('shopping')">
+        <img src="../../../image/character/店员/店员.png" id="shopping">
+    </div>
+    <div class="selection_box" id="Talktoshopping">
+        <p><input type="button" value="买件T恤（消耗400元）" class="selection" id="option4"
+                onclick="if (checkMoneyAndGoto(400, './break.html')) { ChangeNum(0,2,2,0,2,1,-400); goto('./closes-1.html');}"></p>
+        <p><input type="button" value="购买全套穿搭（消耗1000元）" class="selection" id="option4"
+                onclick="if (checkMoneyAndGoto(1000, './break.html')) {ChangeNum(0,3,3,0,8,1,-1000);goto('./closes-2.html')}"></p>
+        <p><input type="button" value="离开" class="selection" id="option5"
+                onclick="ChangeNum(0,0,0,0,0,0,0);goto('./closes-3.html')"></p>
+    </div>
+</body>
+
+</html>
