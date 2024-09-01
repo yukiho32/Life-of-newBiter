@@ -15,6 +15,7 @@ Pacman.FPS = 30;
 
 let gameArea = document.getElementById('pacman');
 let endScreen = document.getElementById('endScreen');
+let finalScoreDisplay = document.getElementById('finalScore');
 
 Pacman.Ghost = function (game, map, colour) {
 
@@ -868,11 +869,15 @@ var PACMAN = (function () {
         }
     }
 
-        function endGame() {
-            gameArea.style.display = 'none'; 
-            endScreen.style.display = 'flex'; 
-            finalScoreDisplay.innerText = `您的最终得分是:${theScore}分`; 
-        }
+    function endGame() {
+        gameArea.style.display = 'none'; 
+        endScreen.style.display = 'flex'; 
+        finalScoreDisplay.innerText = `您的最终得分是:${user.theScore()}分`;   
+    }
+
+    function theScore() { 
+    return score;
+}
 
     function setState(nState) { 
         state = nState;
