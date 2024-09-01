@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="imagebutton" onclick="toMap()" style="right: 0%;top: 0%;"><img src="../image/path-distance.png"></div>
+    <div class="imagebutton" id="map" onclick="toMap()"><img src="../image/path-distance.png"></div>
     <div class="progress-container">
         <img src="../image/属性图标/智力.png" class="progress-image">
         <div class="progress-bar">
@@ -44,14 +44,14 @@
         </div>
     </div>
     <div class="people">
-        <img src="../image/character/白特/无表情.png" style="width: 100%;height: auto;">
+        <img src="../image/character/白特/无表情.png">
     </div>
     <div class="progress-container" style="position: absolute;top: 0%;left: 30%;background-image: none;">
-        <div class="progress-bar" style="background-color: rgb(255, 255, 255); width: 500px;">
+        <div class="progress-bar" id="round" >
             <div class="progress-fill" style="width: 0%;background-color: rgb(0, 0, 0);" id="6"></div>
             <p id="nowround"></p>
         </div>
     </div>
-    <div class="imagebutton" onclick="Save()" style="bottom: 0%;right: 0%;padding: 5px;box-shadow: 2px 2px 5px;"><img src="../image/button/botton/save3.png"></div>
+    <div class="imagebutton" id="save" onclick="Save()"><img src="../image/button/botton/save3.png"></div>
 </body>
 </html>
