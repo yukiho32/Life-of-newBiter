@@ -38,3 +38,188 @@ body {
     height: auto; /* 保持图片的宽高比 */  
     display: block; /* 移除图片下方的默认间隙 */  
 }
+
+#library{
+    bottom: 40%;
+    right: 20%;
+}
+
+#lake{
+    bottom: 70%;
+    right: 40%;
+}
+
+#dormitory{
+    bottom: 15%;
+    right: 74%;
+}
+
+#playground{
+    bottom: 40%;
+    right: 50%;
+}
+
+#teaching{
+    bottom: 0%;
+    right: 20%;
+}
+
+#teaching-2{
+    bottom: 75%;
+    right: 10%; 
+}
+
+#shop{
+    bottom: 50%;
+    right: 0%;
+    width: 80px;
+}
+
+#game{
+    bottom: 38%;
+    right: 0%;
+    width: 80px;
+}
+
+#food{
+    bottom: 26%;
+    right: 0%;
+    width: 80px;}
+
+#closes{
+    bottom: 14%;
+    right: 0%;
+    width: 80px;
+}
+
+#mt{
+    bottom: 2%;
+    right: 0%;
+    width: 80px;
+}
+
+#org{
+    bottom: 2%;
+    right: 12%;
+    width: 80px;
+}
+
+#music{
+    bottom: 14%;
+    right: 12%;
+    width: 80px;
+}
+
+#gym{
+    bottom: 26%;
+    right: 12%;
+    width: 80px;
+}
+
+#dinningHall{
+    bottom: 10%;
+    right: 50%;
+    width: 200px;
+}
+
+#gameindex{
+    top: 0px;
+    left: 0px;
+    width: 80px;
+}
+
+@media (max-width: 854px) {
+        #library {
+            bottom: 0%;
+            right: 0%;
+            width: 200px;
+        }
+    
+        #lake {
+            bottom: 0%;
+            right: 50%;
+        }
+    
+        #dormitory {
+            bottom: 20%;
+            right: 50%;
+            width: 200px;
+        }
+    
+        #playground {
+            bottom: 20%;
+            right: 0%;
+        }
+    
+        #teaching {
+            bottom: 50%;
+            right: 56%;
+            width: 200px;
+        }
+    
+        #teaching-2 {
+            bottom: 45%;
+            right: 0%;
+            width: 200px;
+        }
+    
+        #shop {
+            bottom: 60%;
+            right: 0%;
+            width: 80px;
+        }
+    
+        #game {
+            bottom: 60%;
+            right: 20%;
+            width: 80px;
+        }
+    
+        #food {
+            bottom: 60%;
+            right: 40%;
+            width: 80px;
+        }
+    
+        #closes {
+            bottom: 70%;
+            right: 0%;
+            width: 80px;
+        }
+    
+        #mt {
+            bottom: 70%;
+            right: 20%;
+            width: 80px;
+        }
+    
+        #org {
+            bottom: 70%;
+            right: 40%;
+            width: 80px;
+        }
+    
+        #music {
+            bottom: 76%;
+            right: 65%;
+            width: 80px;
+        }
+    
+        #gym {
+            bottom: 85%;
+            right: 40%;
+            width: 80px;
+        }
+    
+        #dinningHall {
+            bottom: 80%;
+            right: 0%;
+            width: 200px;
+        }
+    
+        #gameindex {
+            top: 0px;
+            left: 0px;
+            width: 80px;
+        }
+}

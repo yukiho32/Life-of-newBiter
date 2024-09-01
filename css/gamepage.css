@@ -16,7 +16,7 @@ body{
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
-
+    overflow: hidden;
     display: flex;
     justify-content: center;
 }
@@ -60,7 +60,7 @@ body{
 /*小立绘（头像）*/
 #small{
     position: absolute;
-    bottom: 0%;
+    top: 75%;
     left: 2%;
     width: 25%;
 }
@@ -369,4 +369,47 @@ body{
 }
 .loader.active .text {  
     opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    #small {
+        width: 50%;
+        left: 5%;
+    }
+
+    #small img {
+        width: 80%;
+    }
+
+    #small {
+        position: absolute;
+        top: 75%;
+        left: 2%;
+        width: 18%;
+    }
+    
+    #menu {
+        bottom: 5%;
+        right: 10%;
+        height: 5%;
+    }
+
+    .op {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    #small {
+            position: absolute;
+            top: 75%;
+            left: 0%;
+            width: 23%;
+        }
+}
+
+@media (max-width: 300px) {
+    #small {
+        display: none;
+    }
 }
