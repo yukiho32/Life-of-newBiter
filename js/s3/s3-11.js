@@ -3,6 +3,7 @@ let a=localStorage.getItem('current-username');
 let userd = localStorage.getItem(a);
 let x=JSON.parse(userd);
 x.club=2;
+x.achievement[2]=1;
 localStorage.setItem(a,JSON.stringify(x));
 var c =
 {

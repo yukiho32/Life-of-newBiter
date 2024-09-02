@@ -79,6 +79,15 @@ function Register(){
                 cl:0,
                 finalchoice:0,
                 fc:0,
+                achievement:[
+                    0,0,0
+                ],
+                point:[
+                    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                ],
+                po:[
+                    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                ]
             }
             localStorage.setItem(u,JSON.stringify(userdata));
             alert("注册成功！");
