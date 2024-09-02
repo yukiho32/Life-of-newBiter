@@ -143,10 +143,24 @@ function startTimer() {
     }, 1000);
 }
 
+let a=localStorage.getItem('current-username');
+
 function endGame() {
     gameArea.style.display = 'none'; 
     endScreen.style.display = 'flex'; 
     finalScoreDisplay.innerText = `您的最终得分是:${score}分`; 
+    let userd = localStorage.getItem(a);
+    let x=JSON.parse(userd);
+    if(score >= 180){
+        x.achievement[3]=1;
+        alert("达成成就：百步穿杨！")
+        localStorage.setItem(a,JSON.stringify(x));
+    }
+    if(score <= 0){
+        x.achievement[4]=1;
+        alert("达成成就：枪下留人！")
+        localStorage.setItem(a,JSON.stringify(x));
+    }
 }
 
 function initializeGame() {

@@ -23,6 +23,14 @@
             display: none;
         }
     </style>
+    <script>
+        let a=localStorage.getItem('current-username');
+        let userd = localStorage.getItem(a);
+        let x=JSON.parse(userd);
+        x.achievement[9]=1;
+        localStorage.setItem(a,JSON.stringify(x));
+        alert("达成成就：学海无涯！");
+    </script>
 </head>
 
 <body style="background-image: url('../../image/bg/game/宿舍.png');">

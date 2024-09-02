@@ -13,6 +13,19 @@
             display: none;
         }
     </style>
+    <script>
+        let a=localStorage.getItem('current-username');
+        let userd = localStorage.getItem(a);
+        let x=JSON.parse(userd);
+        function zixin(){
+            x.ZiXin+=1;
+            localStorage.setItem(a,JSON.stringify(x));
+            if(x.ZiXin === 2){
+                x.achievement[6]=1;
+                alert("达成成就：自信放光芒！")
+            }
+        }
+    </script>
 </head>
 
 <body style="background-image: url('../../image/loginBackground.jpg');">
@@ -32,9 +45,9 @@
     </div>
     <div id="selection_box">
         <p><input type="button" value="但愿军训不要太累" class="selection" id="option1"
-                onclick="{goto('../s2/s2.html'); }"></p>
+                onclick="{goto('../s2/s2.html');}"></p>
         <p><input type="button" value="好，就让我在军训上一展雄姿吧！" class="selection" id="option2"
-                onclick="{goto('../s2/s2.html'); }"></p>
+                onclick="{zixin();goto('../s2/s2.html');}"></p>
     </div>
 </body>
 

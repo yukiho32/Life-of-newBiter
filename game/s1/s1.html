@@ -13,6 +13,15 @@
             display: none;
         }
     </style>
+    <script>
+        let a=localStorage.getItem('current-username');
+        let userd = localStorage.getItem(a);
+        let x=JSON.parse(userd);
+        function zixin(){
+            x.ZiXin+=1;
+            localStorage.setItem(a,JSON.stringify(x));
+        }
+    </script>
 </head>
 
 <body style="background-image: url('../../image/loginBackground.jpg');">
@@ -26,7 +35,7 @@
     </div>
     <div id="selection_box">
         <p><input type="button" value="嗯，一切都在往好的方向前进" class="selection" id="option1"
-                onclick="{goto('s1-2.html');}"></p>
+                onclick="{goto('s1-2.html');zixin();}"></p>
         <p><input type="button" value="刚刚进入大学，一切都还陌生，要多加留意。" class="selection" id="option2"
                 onclick="{goto('s1-2.html'); }"></p>
     </div>

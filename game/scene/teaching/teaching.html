@@ -12,6 +12,19 @@
             display: none;
         }
     </style>
+    <script>
+        let a=localStorage.getItem('current-username');
+        let userd = localStorage.getItem(a);
+        let x=JSON.parse(userd);
+        function ZB(){
+            x.zaoba+=1;
+            if(x.zaoba === 5){
+                x.achievement[7]=1;
+                alert("达成成就：闻鸡起舞！");
+            }
+            localStorage.setItem(a,JSON.stringify(x));
+        }
+    </script>
 </head>
 
 <body style="background-image: url(../../../image/bg/game/教室.png);">
@@ -25,7 +38,7 @@
     </div>
     <div class="circleHintButton" style="bottom: 10%; right: 60%;" id="chair" onclick="Talkto('chair')"></div>
     <div class="selection_box" id="Talktochair">
-        <p><input type="button" value="上早八" class="selection" id="option4" onclick="{ChangeNum(8,0,-3,0,0,1,0);goto('./teaching-1-1.html')}"></p>
+        <p><input type="button" value="上早八" class="selection" id="option4" onclick="{ChangeNum(8,0,-3,0,0,1,0);goto('./teaching-1-1.html')};ZB();"></p>
         <p><input type="button" value="先到处看看" class="selection" id="option5" onclick="goto('./teaching-2.html')"></p>
     </div>
     <div class="imagebutton" style="bottom: 37.5%;left: 7%;width: 160px;" onclick="Talkto('student')">

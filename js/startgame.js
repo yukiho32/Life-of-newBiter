@@ -33,6 +33,7 @@ function continuegame(){
     x.talent = x.t;
     x.club=x.cl;
     x.fc=x.finalchoice;
+    x.zb=x.zaoba;
     localStorage.setItem(nowUser,JSON.stringify(x));
     location.href = "./game/gameindex.html";
     

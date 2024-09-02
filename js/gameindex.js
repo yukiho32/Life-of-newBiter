@@ -13,11 +13,11 @@ window.onload = function(){
     document.getElementById("physical").innerHTML = "体能：" + x.physical;
     document.getElementById("money").innerHTML="零花钱："+x.money;
     document.getElementById("nowround").innerHTML="当前回合："+x.nowround;
-    document.getElementById("1").style.width=x.intelligence*2+'%';
-    document.getElementById("2").style.width=x.communication*2+'%';
-    document.getElementById("3").style.width=x.mood*2+'%';
-    document.getElementById("4").style.width=x.talent*2+'%';
-    document.getElementById("5").style.width=x.physical*2+'%';
+    document.getElementById("1").style.width=x.intelligence+'%';
+    document.getElementById("2").style.width=x.communication+'%';
+    document.getElementById("3").style.width=x.mood+'%';
+    document.getElementById("4").style.width=x.talent+'%';
+    document.getElementById("5").style.width=x.physical+'%';
     document.getElementById("6").style.width=x.nowround/80*100+'%';
     if(x.nowround === 2){
         x.nowround+=1;
@@ -161,6 +161,7 @@ function Save(){
     x.t = x.talent;
     x.mo = x.money;
     x.cl=x.club;
+    x.zb=x.zaoba;
     localStorage.setItem(nowUser,JSON.stringify(x));
     alert("保存成功！")
 }

@@ -869,10 +869,17 @@ var PACMAN = (function () {
         }
     }
 
+    let a=localStorage.getItem('current-username');
+
     function endGame() {
         gameArea.style.display = 'none'; 
         endScreen.style.display = 'flex'; 
-        finalScoreDisplay.innerText = `您的最终得分是:${user.theScore()}分`;   
+        finalScoreDisplay.innerText = `您的最终得分是:${user.theScore()}分`;
+        if(eatenCount === 182){
+            x.achievement[3]=1;
+            alert("达成成就：再来一杯！")
+            localStorage.setItem(a,JSON.stringify(x));
+        } 
     }
 
     function theScore() { 
