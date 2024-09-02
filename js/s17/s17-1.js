@@ -17,7 +17,7 @@ var c =
 {
     "type": 0,
 
-    "nextpage": "./s17-1.html",
+    "nextpage": "../gameindex.html",
 
     "steps": 9,
 

@@ -13,7 +13,7 @@ var c =
 
     "small": ["白特","none","none"],
 
-    "big": ["白特","社长","社长"],
+    "big": ["笑","社长","社长"],
 
     "bigpos": ["middle","middle","middle"],
 };

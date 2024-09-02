@@ -132,35 +132,37 @@ body {
         #library {
             bottom: 0%;
             right: 0%;
-            width: 200px;
+            width: 140px;
         }
     
         #lake {
             bottom: 0%;
             right: 50%;
+            width: 140px;
         }
     
         #dormitory {
             bottom: 20%;
             right: 50%;
-            width: 200px;
+            width: 140px;
         }
     
         #playground {
             bottom: 20%;
             right: 0%;
+            width: 140px;
         }
     
         #teaching {
             bottom: 50%;
             right: 56%;
-            width: 200px;
+            width: 140px;
         }
     
         #teaching-2 {
             bottom: 45%;
             right: 0%;
-            width: 200px;
+            width: 140px;
         }
     
         #shop {
@@ -214,7 +216,7 @@ body {
         #dinningHall {
             bottom: 80%;
             right: 0%;
-            width: 200px;
+            width: 140px;
         }
     
         #gameindex {
