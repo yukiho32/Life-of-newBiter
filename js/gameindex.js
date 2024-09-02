@@ -1,7 +1,9 @@
 function toMap(){
     location.href = './map.html';
 }
-
+function toIndex(){
+    $("body").fadeOut(200, function () { window.location.replace('../startgame.html'); });
+}
 let nowUser=localStorage.getItem('current-username');
 window.onload = function(){
     let userd = localStorage.getItem(nowUser);

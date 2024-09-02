@@ -83,11 +83,19 @@ html {
 }
 
 #save{
-    bottom: 0%;
+    bottom: 20%;
     right: 0%;
+    width: 200px;
     padding: 5px;
     box-shadow: 2px 2px 5px;
 }
+#toIndex{
+    bottom: 0%;
+    right: 0%;
+    width: 80px;
+    padding: 5px;
+}
+
 @media (max-width: 1217px) {
     .imagebutton {
         width: 150px;
@@ -101,13 +109,7 @@ html {
         padding: 10px;
     }
 
-    #map {
-        position: absolute;
-        left: 0%;
-        bottom: 0;
-        width: 100px;
-    }
-
+    
     .progress-container {
         width: 120px;
     }
@@ -122,16 +124,17 @@ html {
     }
 
     .people {
-        left: 20%;
-        width: 400px;
-        right: 10%;
+        position: absolute;
+        left: 50px;
+        bottom: 0px;
+        width: 50px;
     }
 
     #save.imagebutton{
         position: absolute;
         width: 100px;
         height: 50px;
-        bottom: 0px;
+        bottom: 15%;
         right: 0px;
         box-shadow: 2px 2px 5px;
         margin: 0;
@@ -141,5 +144,21 @@ html {
         bottom: 5px;
         right: 0px;
         left: auto;
+    }
+    #map{
+        width: 80px;
+        height: 90px;
+        top: 400px;
+        right: 0px;
+        box-shadow: 2px 2px 5px;
+        margin: 0;
+    }
+    #toIndex{
+        width: 80px;
+        height: 80px;
+        bottom: 0%;
+        right: 0%;
+        box-shadow: 2px 2px 5px;
+        margin: 0;
     }
 }
