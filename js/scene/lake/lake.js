@@ -22,9 +22,9 @@ function Talkto(x){
 }
 
 function Back(){
-    $("#fish").hide();
-    $("#picnic").hide();
-    $("#walk").hide();
+    $("#fish").fadeIn();
+    $("#picnic").fadeIn();
+    $("#walk").fadeIn();
     $(".selection_box").hide();
 }
 function goto(apage) {
