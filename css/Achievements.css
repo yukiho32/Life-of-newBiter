@@ -101,4 +101,29 @@ body {
 .backbuttom:hover::after {
     width: 100%;
 }
-    
+
+@media (max-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+
+    .header {
+        font-size: 25px;
+    }
+
+    .achievement-item {
+        padding: 20px;
+    }
+
+    .achievement-title {
+        font-size: 16px;
+    }
+
+    .achievement-details {
+        font-size: 12px;
+    }
+
+    .backbuttom {
+        font-size: 20px;
+    }
+}
