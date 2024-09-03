@@ -13,6 +13,57 @@
             location.href=ap;
         }
     </script>
+    <style>
+        .selfpage{
+            margin: 25px;
+            position: fixed;
+            overflow: auto;
+            height: 100vh;
+            left: 100px;
+            width: calc(100% - 100px);
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .selfpage .container{
+            background-color: rgb(50, 154, 210);
+            box-shadow: 2px 2px 5px;
+            border-radius: 15px;
+            display: flex;
+            width: 820px;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+        .selfpage .container .text{
+            width: 500px;
+            height: auto;
+            font-size: 20px;
+        }
+        .selfpage .container img{
+            width: 300px;height: auto;
+        }
+        @media (max-width: 992px) {
+            .selfpage {
+                left: 20px;
+                width: calc(100% - 20px);
+     }
+            .selfpage .container {
+                width: 500px;
+                flex-direction: column;
+            }
+            .selfpage .container .text {
+                width: 350px;
+                font-size: 20px;
+            }
+            .selfpage .container img {
+                width: 70%;
+                margin: 0 auto 15px auto;
+                float: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -26,6 +77,15 @@
             <div class="startbuttom" onclick="tooto('./lbj.html')" >林柏健</div>
             <div class="startbuttom" onclick="toStartGame()" >返回</div>
         </div>
+    </div>
+    <div class="selfpage">
+        <div class="container">
+            <img src="../image/IntroductionPeople/xxy.jpg">
+            <div class="text">
+                <p>我叫徐薰语，来自云南，平时很喜欢运动，特别是打篮球！然后空闲时间也挺喜欢打游戏的，但主要是玩一些单机游戏，不太玩网络游戏因为我觉得太肝了肝不动哈哈哈哈。这次很高兴能作为项目小组的一员，和大家一起开发了这款小游戏！</p>
+            </div>
+        </div>
+        
     </div>
 </body>
 
