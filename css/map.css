@@ -166,7 +166,7 @@ body {
         }
     
         #shop {
-            bottom: 60%;
+            bottom: 58%;
             right: 0%;
             width: 80px;
         }
@@ -174,54 +174,54 @@ body {
         #game {
             bottom: 60%;
             right: 20%;
-            width: 80px;
+            width: 70px;
         }
     
         #food {
             bottom: 60%;
             right: 40%;
-            width: 80px;
+            width: 70px;
         }
     
         #closes {
             bottom: 70%;
             right: 0%;
-            width: 80px;
+            width: 70px;
         }
     
         #mt {
-            bottom: 70%;
+            bottom: 71%;
             right: 20%;
-            width: 80px;
+            width: 70px;
         }
     
         #org {
             bottom: 70%;
             right: 40%;
-            width: 80px;
+            width: 70px;
         }
     
         #music {
             bottom: 76%;
             right: 65%;
-            width: 80px;
+            width: 70px;
         }
     
         #gym {
             bottom: 85%;
             right: 40%;
-            width: 80px;
+            width: 70px;
         }
     
         #dinningHall {
-            bottom: 80%;
-            right: 0%;
-            width: 140px;
+            bottom: 82%;
+            right: 5%;
+            width: 100px;
         }
     
         #gameindex {
             top: 0px;
             left: 0px;
-            width: 80px;
+            width: 70px;
         }
 }
