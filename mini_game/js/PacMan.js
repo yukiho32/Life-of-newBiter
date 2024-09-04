@@ -875,11 +875,32 @@ var PACMAN = (function () {
         gameArea.style.display = 'none'; 
         endScreen.style.display = 'flex'; 
         finalScoreDisplay.innerText = `您的最终得分是:${user.theScore()}分`;
+        localStorage.setItem('pacman_finalScore', user.theScore());
+        returnButton.href = '../game/scene/game/game_end.html';
+        let userd = localStorage.getItem(a);
+        let x = JSON.parse(userd);
         if(eatenCount === 182){
             x.achievement[3]=1;
             alert("达成成就：再来一杯！")
             localStorage.setItem(a,JSON.stringify(x));
         } 
+        if (user.theScore() >= 3000) {
+            x.mood += 5;
+            x.talent += 4;
+            x.intelligence += 3;
+            localStorage.setItem(a, JSON.stringify(x));
+        }
+        else if (user.theScore() >= 2000) {
+            x.mood += 4;
+            x.talent += 3;
+            x.intelligence += 2;
+            localStorage.setItem(a, JSON.stringify(x));
+        }
+        else {
+            x.mood += 2;
+            x.talent += 2;
+            localStorage.setItem(a, JSON.stringify(x));
+        }
     }
 
     function theScore() { 

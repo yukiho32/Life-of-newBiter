@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     background: url(../../image/bg/game/体育馆.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
     cursor: none;
@@ -109,4 +109,78 @@ body {
 
 #returnButton:hover {
     background-color: #b94700;
+}
+
+@media (max-width: 1200px) {
+    #gameArea {
+        width: 80vw;
+        height: 70vh;
+    }
+
+    #target {
+        width: 45px;
+        height: 45px;
+    }
+
+    #score,
+    #timer {
+        font-size: 18px;
+    }
+
+    #endScreen {
+        width: 50%;
+        height: 40%;
+    }
+
+    #endMessage {
+        font-size: 35px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    #endMessage .score {
+        font-size: 80px;
+    }
+
+    #returnButton {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 800px) {
+    #gameArea {
+        width: 90vw;
+        height: 80vh;
+    }
+
+    #target {
+        width: 40px;
+        height: 40px;
+    }
+
+    #score,
+    #timer {
+        font-size: 16px;
+    }
+
+    #endScreen {
+        width: 70%;
+        height: 50%;
+    }
+
+    #endMessage {
+        font-size: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #endMessage .score {
+        font-size: 60px;
+    }
+
+    #returnButton {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
 }

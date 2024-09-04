@@ -9,7 +9,12 @@ function ChangeNum(v1,v2,v3,v4,v5,v6,v7){
     x.physical+=v4;//体能
     x.talent+=v5;//才艺
     x.nowround += v6;
-    x.money += 50 * v6 + v7;
+    if (x.nowround % 4 == 0){
+        x.money += 1500 + v7
+    }
+    else {
+        x.money += v7;
+    }
     //alert(x);
     localStorage.setItem(nowUser,JSON.stringify(x));
 }
