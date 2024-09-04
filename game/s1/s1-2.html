@@ -8,6 +8,7 @@
     <script src="../../js/jquery-3.6.0.js"></script>
     <script src="../../js/s1/s1-2.js"></script>
     <script src="../../js/gamecontroll.js"></script>
+    <audio id="ach" src="../../bgm/sef.mp3" type="audio/mpeg"></audio>
     <style>
         #selection_box {
             display: none;
@@ -19,11 +20,16 @@
         let x=JSON.parse(userd);
         function zixin(){
             x.ZiXin+=1;
-            localStorage.setItem(a,JSON.stringify(x));
             if(x.ZiXin === 2){
                 x.achievement[6]=1;
-                alert("达成成就：自信放光芒！")
+                var audio = document.getElementById("ach");
+                audio.play();
+                audio.addEventListener('ended', function() {
+                    alert("达成成就：自信放光芒！");
+                    goto('../s2/s2.html');
+                });
             }
+            localStorage.setItem(a,JSON.stringify(x));
         }
     </script>
 </head>
@@ -47,7 +53,7 @@
         <p><input type="button" value="但愿军训不要太累" class="selection" id="option1"
                 onclick="{goto('../s2/s2.html');}"></p>
         <p><input type="button" value="好，就让我在军训上一展雄姿吧！" class="selection" id="option2"
-                onclick="{zixin();goto('../s2/s2.html');}"></p>
+                onclick="{zixin();}"></p>
     </div>
 </body>
 

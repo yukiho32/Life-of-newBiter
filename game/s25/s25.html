@@ -6,9 +6,8 @@
     <title>Life of newBiter</title>
     <link rel="stylesheet" href="../../css/gamepage.css" />
     <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/s24/s24-1.js"></script>
+    <script src="../../js/s25/s25.js"></script>
     <script src="../../js/gamecontroll.js"></script>
-    <audio id="ach" src="../../bgm/sef.mp3" type="audio/mpeg"></audio>
     <style>
         body, html {  
             margin: 0; 
@@ -24,11 +23,23 @@
             display: none;
         }
     </style>
+    <script>
+        let a=localStorage.getItem('current-username');
+        let userd = localStorage.getItem(a);
+        let x=JSON.parse(userd);
+        x.achievement[12]=1;
+        localStorage.setItem(a,JSON.stringify(x));
+        alert("达成成就：抑郁休学！");
+    </script>
 </head>
 
 <body style="background-image: url('../../image/bg/game/宿舍.png');">
     <div class="loader" id="loader">
-        <div class="text">期末考试并没有让你感到太多压力，你更多的心思还是放在了暑假身上</div>
+        <div class="text">
+            中学阶段适应了应试教育的你，对大学的学习生活感到了前所未有的迷茫，你对自己的人生缺少规划，又常常觉得自己比不过周围优秀的同学们。<br>
+            近来，这种迷茫焦虑的心情越发严重，已经影响了你的日常生活，看来得去医院看看了...<br>
+            经过医院的诊断，你的心理健康确实已经出现了一些问题，和爸爸妈妈商量后，你决定休学一年，既是让自己调整心态，也是希望给自己一点时间，想想大学生活到底应该如何度过...<br>
+        </div>
     </div>
     <div class="dialog" onclick="{next_move();}"></div>
     <div id="text-box" onclick="{next_move();}">

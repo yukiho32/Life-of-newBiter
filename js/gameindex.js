@@ -21,6 +21,9 @@ window.onload = function(){
     document.getElementById("4").style.width=x.talent+'%';
     document.getElementById("5").style.width=x.physical+'%';
     document.getElementById("6").style.width=x.nowround/80*100+'%';
+    if(x.mood <= 0){
+        $("body").fadeOut(200, function () { window.location.replace('./s25/s25.html'); });
+    }
     if(x.nowround === 2){
         x.nowround+=1;
         localStorage.setItem(nowUser,JSON.stringify(x));
