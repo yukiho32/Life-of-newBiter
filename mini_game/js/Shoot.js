@@ -149,17 +149,31 @@ function endGame() {
     gameArea.style.display = 'none'; 
     endScreen.style.display = 'flex'; 
     finalScoreDisplay.innerText = `您的最终得分是:${score}分`; 
+    localStorage.setItem('shoot_finalScore', score);
+    returnButton.href = '../game/scene/gym/game_end.html';
     let userd = localStorage.getItem(a);
-    let x=JSON.parse(userd);
+    let x = JSON.parse(userd);
     if(score >= 180){
-        x.achievement[3]=1;
+        x.achievement[3] = 1;
+        x.mood += 5;
+        x.talent += 4;
         alert("达成成就：百步穿杨！")
-        localStorage.setItem(a,JSON.stringify(x));
+        localStorage.setItem(a, JSON.stringify(x));
     }
-    if(score <= 0){
+    else if(score < 180 && score >= 100){
+        x.mood += 3;
+        x.talent += 3;
+        localStorage.setItem(a, JSON.stringify(x));
+    }
+    else if (score < 100 && score > 0) {
+        x.mood += 1;
+        x.talent += 2;
+        localStorage.setItem(a, JSON.stringify(x));
+    }
+    else if (score <= 0) {
         x.achievement[4]=1;
         alert("达成成就：枪下留人！")
-        localStorage.setItem(a,JSON.stringify(x));
+        localStorage.setItem(a, JSON.stringify(x));
     }
 }
 
