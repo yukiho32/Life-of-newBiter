@@ -13,6 +13,7 @@ html, body {
 #pacman {
     height: 500px;
     width: 500px;
+    right: 30%;
     border-radius: 5px;
     margin: 0px auto;
 }
@@ -109,15 +110,7 @@ a {
     }
 }
 
-@media (max-width: 900px) {
-    h1 {
-            font-size: 24px;
-        }
-    
-    .game-info {
-            font-size: 14px;
-    }
-    
+@media (max-width: 540px) {
     #endScreen {
         width: 70%;
         height: 50%;
